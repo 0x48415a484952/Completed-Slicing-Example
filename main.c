@@ -36,10 +36,6 @@ int main() {
         sum += ++j * array[i];
     }
 
-    ///debuging
-    // printf("%d", sum);
-    // return 0;
-
     controlNum = array[0];
     recurrent = sum % 11;
     if( (recurrent > 1) && (controlNum == (11 - recurrent)) ) {

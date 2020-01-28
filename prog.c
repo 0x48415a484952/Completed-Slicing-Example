@@ -7,7 +7,6 @@ int count(long number) {
     int count = 0;
     while(number != 0) {
         count++;
-        // number /= 10;
         number /= SIZE;
     }
     return count;
@@ -26,7 +25,6 @@ int checkUserInputAgainstInvalidCodes(long userInput) {
         9999999999,
         0000000000
     };
-    // for(int i = 0; i <= 9; i++) {
     for(int i = 0; i < SIZE; i++) {
         if(invalidCodes[i] == userInput) return 1;
     }
@@ -35,22 +33,16 @@ int checkUserInputAgainstInvalidCodes(long userInput) {
 
 int * explodeAndReverse(long number) {
     static int array[SIZE - 1];
-    // static int array[9];
     for(int i = 0; i < SIZE; i++) {
-    // for(int i = 0; i <= 9; i++) {
-        // array[i] = number % 10;
         array[i] = number % SIZE;
         number /= SIZE;
-        printf("%d", array[i]);
     }
-    printf("\n");
     return array;
 }
 
 int calculateSumOfArrayWithKeyValue(int *ptr) {
     int sum = 0;
     int j = 1;
-    // for(int i = 1; i <= 9; i++) {
     for(int i = 1; i < SIZE; i++) {
         sum += ++j * ptr[i];
     }
@@ -60,15 +52,12 @@ int calculateSumOfArrayWithKeyValue(int *ptr) {
 int checkNationalCodeValidation(long userInput) {
     if(checkUserInputAgainstInvalidCodes(userInput)) {
         return 0;
-    // } else if(count(userInput) == 10) {
     } else if(count(userInput) == SIZE) {
         int * reversedArray;
         reversedArray = explodeAndReverse(userInput);
         int controlNum = reversedArray[0];
         int sum = calculateSumOfArrayWithKeyValue(reversedArray);
-        // int recurrent = sum % 11;
         int recurrent = sum % (SIZE + 1);
-        // if( (recurrent > 1) && (controlNum == (11 - recurrent)) ) {
         if( (recurrent > 1) && (controlNum == ((SIZE + 1) - recurrent)) ) {
             return 1;
         } else if(recurrent == 0 && controlNum == 0) {
