@@ -1,20 +1,17 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#define SIZE (10)
+
 int count(long number) {
     int count = 0;
     while(number != 0) {
         count++;
-        number /= 10;
+        // number /= 10;
+        number /= SIZE;
     }
     return count;
 }
-
-// int countArray(long array[]) {
-//     int count = 0;
-//     count = sizeof(array) / sizeof(long);
-//     return count;
-// }
 
 int checkUserInputAgainstInvalidCodes(long userInput) {
     long invalidCodes[] = {
@@ -29,37 +26,72 @@ int checkUserInputAgainstInvalidCodes(long userInput) {
         9999999999,
         0000000000
     };
-    // for(int i = 0; i < countArray(invalidCodes); i++) {
-    for(int i = 0; i <= 9; i++) {
+    // for(int i = 0; i <= 9; i++) {
+    for(int i = 0; i < SIZE; i++) {
         if(invalidCodes[i] == userInput) return 1;
     }
     return 0;
 }
 
 int * explodeAndReverse(long number) {
-    int array[9];
-    for(int i = 0; i <= 9; i++) {
-        array[i] = number % 10;
-        number /= 10;
+    static int array[SIZE - 1];
+    // static int array[9];
+    for(int i = 0; i < SIZE; i++) {
+    // for(int i = 0; i <= 9; i++) {
+        // array[i] = number % 10;
+        array[i] = number % SIZE;
+        number /= SIZE;
         printf("%d", array[i]);
     }
     printf("\n");
-    int *ptr = &array[0];
+    return array;
+}
 
-    return ptr;
+int calculateSumOfArrayWithKeyValue(int *ptr) {
+    int sum = 0;
+    int j = 1;
+    // for(int i = 1; i <= 9; i++) {
+    for(int i = 1; i < SIZE; i++) {
+        sum += ++j * ptr[i];
+    }
+    return sum;
+}
+
+int checkNationalCodeValidation(long userInput) {
+    if(checkUserInputAgainstInvalidCodes(userInput)) {
+        return 0;
+    // } else if(count(userInput) == 10) {
+    } else if(count(userInput) == SIZE) {
+        int * reversedArray;
+        reversedArray = explodeAndReverse(userInput);
+        int controlNum = reversedArray[0];
+        int sum = calculateSumOfArrayWithKeyValue(reversedArray);
+        // int recurrent = sum % 11;
+        int recurrent = sum % (SIZE + 1);
+        // if( (recurrent > 1) && (controlNum == (11 - recurrent)) ) {
+        if( (recurrent > 1) && (controlNum == ((SIZE + 1) - recurrent)) ) {
+            return 1;
+        } else if(recurrent == 0 && controlNum == 0) {
+            return 1;
+        } else if(recurrent == 1 && controlNum == 1) {
+            return 1;
+        } else {
+            return 0;
+        }
+    } else {
+        return 0;
+    }
+
 }
 
 int main() {
     long nationalCode;
     printf("Enter a National Code: ");
     scanf("%ld", &nationalCode);
-    printf("Your National Code Is: %ld \n and the size of it is: %d \n", nationalCode, count(nationalCode));
-    explodeAndReverse(nationalCode);
-    // reverseArray(splitNumber(nationalCode));
-    if(checkUserInputAgainstInvalidCodes(nationalCode)) {
-        printf("not valid \n");
-    } else {
+    if(checkNationalCodeValidation(nationalCode)) {
         printf("valid \n");
+    } else {
+        printf("not valid \n");
     }
     return 0;
 }
