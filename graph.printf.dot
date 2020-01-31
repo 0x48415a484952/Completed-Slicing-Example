@@ -1,0 +1,21 @@
+digraph G {
+  rankdir=TB;
+  node [style="filled", ];
+  7 [label="Decl format", fillcolor="#FFEFD5", shape=box, ];
+  8 [label="In1", fillcolor="#6495ED", shape=box, ];
+  9 [label="Decl __va_params", fillcolor="#FFEFD5", shape=box, ];
+  10 [label="In2", fillcolor="#6495ED", shape=box, ];
+  11 [label="OutRet", fillcolor="#90EE90", shape=box, ];
+  12 [label="In(\"%-4d\"[bits 0 to 39])", fillcolor="#6495ED", shape=box, ];
+  13 [label="In(\"    \"[bits 0 to 39])", fillcolor="#6495ED", shape=box, ];
+  
+  
+  edge [dir=back, ];
+  8 -> 7 [color="#000000", style="dotted", ];
+  7 -> 8 [color="#000000", style="dotted", ];
+  10 -> 9 [color="#000000", style="dotted", ];
+  9 -> 10 [color="#000000", style="dotted", ];
+  12 -> 11 [color="#0000FF", ];
+  13 -> 11 [color="#0000FF", ];
+  
+  }

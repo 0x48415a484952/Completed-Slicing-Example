@@ -1,0 +1,16 @@
+digraph G {
+  rankdir=TB;
+  node [style="filled", ];
+  2 [label="Decl nptr", fillcolor="#FFEFD5", shape=box, ];
+  3 [label="In1", fillcolor="#6495ED", shape=box, ];
+  4 [label="OutRet", fillcolor="#90EE90", shape=box, ];
+  5 [label="In(S_1_S_l[0..1])", fillcolor="#6495ED", shape=box, ];
+  
+  
+  edge [dir=back, ];
+  3 -> 2 [color="#000000", style="dotted", ];
+  2 -> 3 [color="#000000", style="dotted", ];
+  3 -> 4 [color="#0000FF", ];
+  5 -> 4 [color="#0000FF", ];
+  
+  }

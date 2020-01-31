@@ -1,0 +1,1057 @@
+[kernel] Parsing hazhir.c (with preprocessing)
+[variadic] hazhir.c:34: Warning: 
+  Call to function printf with non-static format argument:
+  no specification will be generated.
+[eva] Analyzing a complete application starting at main
+[eva] Computing initial state
+[eva] Initial state computed
+[eva:initial-state] Values of globals at initialization
+  a[0..899] ∈ {0}
+  b ∈ {0}
+  c ∈ {0}
+  d ∈ {1}
+  e ∈ {1}
+  f ∈ {0}
+  g ∈ {0}
+  h ∈ {0}
+  O ∈ {0}
+[eva:alarm] hazhir.c:19: Warning: out of bounds read. assert \valid_read(l);
+[eva] using specification for function atoi
+[eva:alarm] hazhir.c:19: Warning: 
+  function atoi: precondition 'valid_nptr' got status unknown.
+[eva] hazhir.c:20: starting to merge loop iterations
+[eva:alarm] hazhir.c:20: Warning: signed overflow. assert k * k ≤ 2147483647;
+[eva:alarm] hazhir.c:20: Warning: signed overflow. assert k + 1 ≤ 2147483647;
+[eva] hazhir.c:21: starting to merge loop iterations
+[eva:alarm] hazhir.c:21: Warning: signed overflow. assert h * h ≤ 2147483647;
+[eva:alarm] hazhir.c:21: Warning: signed overflow. assert h + 1 ≤ 2147483647;
+[eva:alarm] hazhir.c:23: Warning: 
+  signed overflow. assert h * (int)(h + 1) ≤ 2147483647;
+[eva:alarm] hazhir.c:26: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:26: Warning: 
+  accessing out of bounds index. assert 0 ≤ (int)((int)(b << 5) | c);
+[eva:alarm] hazhir.c:26: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva] hazhir.c:26: starting to merge loop iterations
+[eva:alarm] hazhir.c:26: Warning: signed overflow. assert b + e ≤ 2147483647;
+[eva:alarm] hazhir.c:27: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:27: Warning: 
+  accessing out of bounds index. assert 0 ≤ (int)((int)(b << 5) | c);
+[eva:alarm] hazhir.c:27: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva] hazhir.c:27: starting to merge loop iterations
+[eva] hazhir.c:24: starting to merge loop iterations
+[eva:alarm] hazhir.c:26: Warning: 
+  invalid LHS operand for left shift. assert 0 ≤ b;
+[eva:alarm] hazhir.c:27: Warning: 
+  invalid LHS operand for left shift. assert 0 ≤ b;
+[eva:alarm] hazhir.c:25: Warning: signed overflow. assert O + 1 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  signed overflow. assert (int)(k - (int)(b + 1)) << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  accessing out of bounds index.
+  assert (int)((int)((int)(k - (int)(b + 1)) << 5) | c) < 900;
+[eva:alarm] hazhir.c:33: Warning: 
+  signed overflow. assert (int)(k - (int)(b + 1)) << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  accessing out of bounds index.
+  assert (int)((int)((int)(k - (int)(b + 1)) << 5) | c) < 900;
+[eva:alarm] hazhir.c:33: Warning: 
+  signed overflow. assert (int)(k - (int)(b + 1)) << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  accessing out of bounds index.
+  assert (int)((int)((int)(k - (int)(b + 1)) << 5) | c) < 900;
+[kernel:annot:missing-spec] hazhir.c:34: Warning: 
+  Neither code nor specification for function printf, generating default assigns from the prototype
+[eva] using specification for function printf
+[eva] hazhir.c:31: starting to merge loop iterations
+[eva:alarm] hazhir.c:33: Warning: 
+  invalid LHS operand for left shift. assert 0 ≤ (int)(k - (int)(b + 1));
+[eva:alarm] hazhir.c:33: Warning: 
+  invalid LHS operand for left shift. assert 0 ≤ (int)(k - (int)(b + 1));
+[eva:alarm] hazhir.c:33: Warning: 
+  invalid LHS operand for left shift. assert 0 ≤ (int)(k - (int)(b + 1));
+[eva:alarm] hazhir.c:33: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva:alarm] hazhir.c:33: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva:alarm] hazhir.c:33: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:33: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva:alarm] hazhir.c:34: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:34: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva:alarm] hazhir.c:34: Warning: signed overflow. assert b << 5 ≤ 2147483647;
+[eva:alarm] hazhir.c:34: Warning: 
+  accessing out of bounds index. assert (int)((int)(b << 5) | c) < 900;
+[eva] using specification for function putchar
+[eva] hazhir.c:29: starting to merge loop iterations
+[eva] done for function main
+[scope:rm_asserts] removing 12 assertion(s)
+[eva:summary] ====== ANALYSIS SUMMARY ======
+  ----------------------------------------------------------------------------
+  1 function analyzed (out of 1): 100% coverage.
+  In this function, 81 statements reached (out of 81): 100% coverage.
+  ----------------------------------------------------------------------------
+  Some errors and warnings have been raised during the analysis:
+    by the Eva analyzer:      0 errors    0 warnings
+    by the Frama-C kernel:    0 errors    1 warning
+  ----------------------------------------------------------------------------
+  35 alarms generated by the analysis:
+       1 invalid memory access
+      12 accesses out of bounds index
+      17 integer overflows
+       5 invalid shifts
+  ----------------------------------------------------------------------------
+  Evaluation of the logical properties reached by the analysis:
+    Assertions        0 valid     0 unknown     0 invalid      0 total
+    Preconditions     0 valid     1 unknown     0 invalid      1 total
+  0% of the logical properties reached have been proven.
+  ----------------------------------------------------------------------------
+[pdg] computing for function atoi
+[from] Computing for function atoi
+[from] Done for function atoi
+[pdg] done for function atoi
+[pdg] dot file generated in graph.atoi.dot
+[pdg] computing for function printf
+[from] Computing for function printf
+[from] Done for function printf
+[pdg] done for function printf
+[pdg] dot file generated in graph.printf.dot
+[pdg] computing for function putchar
+[from] Computing for function putchar
+[from] Done for function putchar
+[pdg] done for function putchar
+[pdg] dot file generated in graph.putchar.dot
+[pdg] computing for function main
+[pdg] done for function main
+[pdg] dot file generated in graph.main.dot
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] PDG for atoi
+ {n1}: InCtrl
+ {n2}: VarDecl : nptr
+   -[a--]-> 3
+ {n3}: In1
+   -[a--]-> 2
+ {n4}: OutRet
+   -[--d]-> 3
+   -[--d]-> 5
+ {n5}: In(S_1_S_l[0..1])
+[pdg] PDG for printf
+ {n6}: InCtrl
+ {n7}: VarDecl : format
+   -[a--]-> 8
+ {n8}: In1
+   -[a--]-> 7
+ {n9}: VarDecl : __va_params
+   -[a--]-> 10
+ {n10}: In2
+   -[a--]-> 9
+ {n11}: OutRet
+   -[--d]-> 12
+   -[--d]-> 13
+ {n12}: In("%-4d"[bits 0 to 39])
+ {n13}: In("    "[bits 0 to 39])
+[pdg] PDG for putchar
+ {n14}: InCtrl
+ {n15}: VarDecl : c
+   -[a--]-> 16
+ {n16}: In1
+   -[a--]-> 15
+ {n17}: Out(S___fc_stdout[0])
+   -[--d]-> 16
+   -[--d]-> 19
+ {n18}: OutRet
+   -[--d]-> 17
+   -[--d]-> 19
+ {n19}: In(S___fc_stdout[0])
+[pdg] PDG for main
+ {n20}: InCtrl
+ {n21}: VarDecl : k
+   -[a--]-> 22
+ {n22}: In1
+   -[a--]-> 21
+ {n23}: VarDecl : l
+   -[a--]-> 24
+ {n24}: In2
+   -[a--]-> 23
+ {n25}: VarDecl : tmp
+ {n26}: VarDecl : tmp_0
+ {n27}: VarDecl : tmp_1
+ {n28}: VarDecl : tmp_2
+ {n29}: VarDecl : __va_arg0
+ {n30}: VarDecl : __va_args
+ {n31}: VarDecl : __retres
+ {n32}: unspecified sequence
+   -[-c-]-> 20
+ {n33}: l ++;
+   -[-c-]-> 20
+   -[a-d]-> 23
+   -[--d]-> 24
+   -[-c-]-> 32
+ {n34}: ;
+   -[-c-]-> 20
+   -[-c-]-> 32
+ {n35}: Call4-InCtrl : g = atoi((char const *)*l);
+   -[-c-]-> 20
+ {n36}: Call4-In1 : g = atoi((char const *)*l);
+   -[-c-]-> 20
+   -[--d]-> 23
+   -[--d]-> 33
+   -[-c-]-> 35
+   -[--d]-> 127
+ {n37}: Call4-OutRet : g = atoi((char const *)*l);
+   -[-c-]-> 20
+   -[-c-]-> 35
+   -[--d]-> 36
+   -[--d]-> 126
+ {n38}: k = 0;
+   -[-c-]-> 20
+   -[a--]-> 21
+ {n39}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[-c-]-> 45
+ {n40}: k * k < g
+   -[-c-]-> 20
+   -[--d]-> 21
+   -[--d]-> 37
+   -[--d]-> 38
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[--d]-> 43
+   -[-c-]-> 45
+ {n41}: unspecified sequence
+   -[-c-]-> 20
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[-c-]-> 45
+ {n42}: tmp = k;
+   -[-c-]-> 20
+   -[--d]-> 21
+   -[a--]-> 25
+   -[--d]-> 38
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[-c-]-> 41
+   -[--d]-> 43
+   -[-c-]-> 45
+ {n43}: k ++;
+   -[-c-]-> 20
+   -[a-d]-> 21
+   -[--d]-> 38
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[-c-]-> 41
+   -[--d]-> 43
+   -[-c-]-> 45
+ {n44}: b = tmp >> 1;
+   -[-c-]-> 20
+   -[--d]-> 25
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[-c-]-> 41
+   -[--d]-> 42
+   -[-c-]-> 45
+ {n45}: break;
+   -[-c-]-> 20
+   -[-c-]-> 39
+   -[-c-]-> 40
+   -[-c-]-> 45
+ {n46}: h = 0;
+   -[-c-]-> 20
+ {n47}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 47
+   -[-c-]-> 48
+   -[-c-]-> 50
+ {n48}: h * h <= g
+   -[-c-]-> 20
+   -[--d]-> 37
+   -[--d]-> 46
+   -[-c-]-> 47
+   -[-c-]-> 48
+   -[--d]-> 49
+   -[-c-]-> 50
+ {n49}: h ++;
+   -[-c-]-> 20
+   -[--d]-> 46
+   -[-c-]-> 47
+   -[-c-]-> 48
+   -[--d]-> 49
+   -[-c-]-> 50
+ {n50}: break;
+   -[-c-]-> 20
+   -[-c-]-> 47
+   -[-c-]-> 48
+   -[-c-]-> 50
+ {n51}: h --;
+   -[-c-]-> 20
+   -[--d]-> 46
+   -[--d]-> 49
+ {n52}: unspecified sequence
+   -[-c-]-> 20
+ {n53}: h += g > h * (h + 1);
+   -[-c-]-> 20
+   -[--d]-> 37
+   -[--d]-> 51
+   -[-c-]-> 52
+ {n54}: c = (h - 1) >> 1;
+   -[-c-]-> 20
+   -[-c-]-> 52
+   -[--d]-> 53
+ {n55}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 84
+ {n56}: d <= g
+   -[-c-]-> 20
+   -[--d]-> 37
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[--d]-> 67
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n57}: block
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 84
+ {n58}: O ++;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 58
+   -[-c-]-> 84
+   -[--d]-> 125
+ {n59}: f = 0;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 84
+ {n60}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 84
+ {n61}: f < O
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 58
+   -[--d]-> 59
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[--d]-> 70
+   -[-c-]-> 84
+ {n62}: d <= g
+   -[-c-]-> 20
+   -[--d]-> 37
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[--d]-> 67
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n63}: break;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 84
+ {n64}: break;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 84
+ {n65}: unspecified sequence
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 84
+ {n66}: tmp_0 = d;
+   -[-c-]-> 20
+   -[a--]-> 26
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 65
+   -[--d]-> 67
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n67}: d ++;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 65
+   -[--d]-> 67
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n68}: a[(b << 5) | c] = tmp_0;
+   -[-c-]-> 20
+   -[--d]-> 26
+   -[a--]-> 44
+   -[a--]-> 54
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[-c-]-> 65
+   -[--d]-> 66
+   -[a--]-> 69
+   -[a--]-> 81
+   -[-c-]-> 84
+   -[a--]-> 122
+ {n69}: b += e;
+   -[-c-]-> 20
+   -[--d]-> 44
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[--d]-> 69
+   -[--d]-> 83
+   -[-c-]-> 84
+   -[--d]-> 122
+   -[--d]-> 123
+ {n70}: f ++;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 59
+   -[-c-]-> 60
+   -[-c-]-> 61
+   -[-c-]-> 62
+   -[-c-]-> 63
+   -[-c-]-> 64
+   -[--d]-> 70
+   -[-c-]-> 84
+ {n71}: f = 0;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 84
+ {n72}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 84
+ {n73}: f < O
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 58
+   -[--d]-> 71
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[--d]-> 82
+   -[-c-]-> 84
+ {n74}: d <= g
+   -[-c-]-> 20
+   -[--d]-> 37
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 67
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n75}: break;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 84
+ {n76}: break;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 84
+ {n77}: unspecified sequence
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 84
+ {n78}: tmp_1 = d;
+   -[-c-]-> 20
+   -[a--]-> 27
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 67
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 77
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n79}: d ++;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 67
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 77
+   -[--d]-> 79
+   -[-c-]-> 84
+   -[--d]-> 124
+ {n80}: a[(b << 5) | c] = tmp_1;
+   -[-c-]-> 20
+   -[--d]-> 27
+   -[a--]-> 44
+   -[a--]-> 54
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[a--]-> 69
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[-c-]-> 77
+   -[--d]-> 78
+   -[a--]-> 81
+   -[-c-]-> 84
+   -[a--]-> 122
+ {n81}: c += e;
+   -[-c-]-> 20
+   -[--d]-> 54
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[--d]-> 81
+   -[--d]-> 83
+   -[-c-]-> 84
+   -[--d]-> 123
+ {n82}: f ++;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 71
+   -[-c-]-> 72
+   -[-c-]-> 73
+   -[-c-]-> 74
+   -[-c-]-> 75
+   -[-c-]-> 76
+   -[--d]-> 82
+   -[-c-]-> 84
+ {n83}: e = - e;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 57
+   -[--d]-> 83
+   -[-c-]-> 84
+   -[--d]-> 123
+ {n84}: break;
+   -[-c-]-> 20
+   -[-c-]-> 55
+   -[-c-]-> 56
+   -[-c-]-> 84
+ {n85}: c = 0;
+   -[-c-]-> 20
+ {n86}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 116
+ {n87}: c < h
+   -[-c-]-> 20
+   -[--d]-> 53
+   -[--d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[--d]-> 115
+   -[-c-]-> 116
+ {n88}: block
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 116
+ {n89}: b = 0;
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 116
+ {n90}: while(1)
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 116
+ {n91}: b < k
+   -[-c-]-> 20
+   -[--d]-> 21
+   -[--d]-> 38
+   -[--d]-> 43
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[--d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[--d]-> 111
+   -[-c-]-> 116
+ {n92}: break;
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 116
+ {n93}: block
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 116
+ {n94}: b < k / 2
+   -[-c-]-> 20
+   -[--d]-> 21
+   -[--d]-> 38
+   -[--d]-> 43
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[--d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[--d]-> 111
+   -[-c-]-> 116
+ {n95}: unspecified sequence
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 94
+   -[-c-]-> 116
+ {n96}: a[(b << 5) | c] ^= a[((k - (b + 1)) << 5) | c];
+   -[-c-]-> 20
+   -[--d]-> 21
+   -[--d]-> 38
+   -[--d]-> 43
+   -[--d]-> 68
+   -[--d]-> 80
+   -[a-d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[a-d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 94
+   -[-c-]-> 95
+   -[--d]-> 96
+   -[--d]-> 97
+   -[--d]-> 98
+   -[a-d]-> 111
+   -[a-d]-> 115
+   -[-c-]-> 116
+   -[--d]-> 121
+ {n97}: a[((k - (b + 1)) << 5) | c] ^= a[(b << 5) | c];
+   -[-c-]-> 20
+   -[a-d]-> 21
+   -[a-d]-> 38
+   -[a-d]-> 43
+   -[--d]-> 68
+   -[--d]-> 80
+   -[a-d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[a-d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 94
+   -[-c-]-> 95
+   -[--d]-> 96
+   -[--d]-> 97
+   -[--d]-> 98
+   -[a-d]-> 111
+   -[a-d]-> 115
+   -[-c-]-> 116
+   -[--d]-> 121
+ {n98}: a[(b << 5) | c] ^= a[((k - (b + 1)) << 5) | c];
+   -[-c-]-> 20
+   -[--d]-> 21
+   -[--d]-> 38
+   -[--d]-> 43
+   -[--d]-> 68
+   -[--d]-> 80
+   -[a-d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[a-d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 94
+   -[-c-]-> 95
+   -[--d]-> 96
+   -[--d]-> 97
+   -[--d]-> 98
+   -[a-d]-> 111
+   -[a-d]-> 115
+   -[-c-]-> 116
+   -[--d]-> 121
+ {n99}: unspecified sequence
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 116
+ {n100}: ;
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 99
+   -[-c-]-> 116
+ {n101}: block
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 99
+   -[-c-]-> 116
+ {n102}: a[(b << 5) | c]
+   -[-c-]-> 20
+   -[--d]-> 68
+   -[--d]-> 80
+   -[--d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[--d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[--d]-> 96
+   -[--d]-> 97
+   -[--d]-> 98
+   -[-c-]-> 99
+   -[-c-]-> 101
+   -[--d]-> 111
+   -[--d]-> 115
+   -[-c-]-> 116
+   -[--d]-> 121
+ {n103}: tmp_2 = "%-4d";
+   -[-c-]-> 20
+   -[a--]-> 28
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 99
+   -[-c-]-> 101
+   -[-c-]-> 102
+   -[-c-]-> 116
+ {n104}: tmp_2 = "    ";
+   -[-c-]-> 20
+   -[a--]-> 28
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 99
+   -[-c-]-> 101
+   -[-c-]-> 102
+   -[-c-]-> 116
+ {n105}: block
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 116
+ {n106}: int __va_arg0 = a[(b << 5) | c];
+   -[-c-]-> 20
+   -[a--]-> 29
+   -[--d]-> 68
+   -[--d]-> 80
+   -[--d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[--d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[--d]-> 96
+   -[--d]-> 97
+   -[--d]-> 98
+   -[-c-]-> 105
+   -[--d]-> 111
+   -[--d]-> 115
+   -[-c-]-> 116
+   -[--d]-> 121
+ {n107}: void *__va_args[1] = {& __va_arg0};
+   -[-c-]-> 20
+   -[--d]-> 29
+   -[a--]-> 30
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 105
+   -[-c-]-> 116
+ {n108}: Call95-InCtrl : printf(tmp_2,(void * const *)(__va_args));
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 105
+   -[-c-]-> 116
+ {n109}: Call95-In1 : printf(tmp_2,(void * const *)(__va_args));
+   -[-c-]-> 20
+   -[--d]-> 28
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[--d]-> 103
+   -[--d]-> 104
+   -[-c-]-> 105
+   -[-c-]-> 108
+   -[-c-]-> 116
+ {n110}: Call95-In2 : printf(tmp_2,(void * const *)(__va_args));
+   -[-c-]-> 20
+   -[--d]-> 30
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[-c-]-> 93
+   -[-c-]-> 105
+   -[-c-]-> 108
+   -[-c-]-> 116
+ {n111}: b ++;
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[--d]-> 89
+   -[-c-]-> 90
+   -[-c-]-> 91
+   -[-c-]-> 92
+   -[--d]-> 111
+   -[-c-]-> 116
+ {n112}: Call89-InCtrl : putchar('\n');
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 116
+ {n113}: Call89-In1 : putchar('\n');
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 112
+   -[-c-]-> 116
+ {n114}: Call89-Out(S___fc_stdout[0]) : putchar('\n');
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 88
+   -[-c-]-> 112
+   -[--d]-> 113
+   -[--d](S___fc_stdout[0])-> 114
+   -[-c-]-> 116
+   -[--d]-> 120
+ {n115}: c ++;
+   -[-c-]-> 20
+   -[--d]-> 85
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[--d]-> 115
+   -[-c-]-> 116
+ {n116}: break;
+   -[-c-]-> 20
+   -[-c-]-> 86
+   -[-c-]-> 87
+   -[-c-]-> 116
+ {n117}: __retres = 0;
+   -[-c-]-> 20
+   -[a--]-> 31
+ {n118}: return __retres;
+   -[-c-]-> 20
+   -[--d]-> 31
+   -[--d]-> 117
+ {n119}: OutRet
+   -[--d]-> 118
+ {n120}: In(S___fc_stdout[0])
+ {n121}: In(a[0..899])
+ {n122}: In(b)
+ {n123}: In(e)
+ {n124}: In(d)
+ {n125}: In(O)
+ {n126}: In(S_1_S_l[0..1])
+ {n127}: In(S_l[1])

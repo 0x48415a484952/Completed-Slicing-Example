@@ -1,0 +1,34 @@
+[kernel] Parsing hazhir.c (with preprocessing)
+[variadic] hazhir.c:34: Warning: 
+  Call to function printf with non-static format argument:
+  no specification will be generated.
+[metrics] Defined functions (1)
+  =====================
+   main (0 call); 
+  
+  Undefined functions (0)
+  =======================
+   
+  
+  'Extern' global variables (0)
+  =============================
+   
+  
+  Potential entry points (1)
+  ==========================
+   main; 
+  
+  Global metrics
+  ============== 
+  Sloc = 81
+  Decision point = 11
+  Global variables = 9
+  If = 11
+  Loop = 7
+  Goto = 0
+  Assignment = 37
+  Exit point = 1
+  Function = 1
+  Function call = 3
+  Pointer dereferencing = 1
+  Cyclomatic complexity = 12
